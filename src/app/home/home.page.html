@@ -1,20 +1,55 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Hello Goodbye Ionic Angular V1
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Hello Goodbye Ionic Angular V1</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <h2>{{title}}</h2>
+
+    <p>
+      <ion-label>
+        Input:<br />
+        <input type="text" [(ngModel)]="textInput" />
+      </ion-label>
+    </p>
+
+    <p>
+      <ion-button (click)="handleHello()">Hello</ion-button>
+    </p>
+
+    <p>
+      <ion-button (click)="handleGoodbye()">Goodbye</ion-button>
+    </p>
+
+    <p>
+      <ion-button [disabled]=(!textInput) (click)="handleUpperCase()">Upper Case</ion-button>
+    </p>
+
+    <p>
+      <ion-button [disabled]=(!textInput) (click)="handleLowerCase()">Lower Case</ion-button>
+    </p>
+
+    <p>
+      <ion-button [disabled]=(!textInput) (click)="handleMessage()">Show Input Message</ion-button>
+    </p>
+
+    <p>
+      <ion-button [disabled]=(!textInput) (click)="handleClear()">Clear Input Message</ion-button>
+    </p>
+  
   </div>
+
 </ion-content>
+
