@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "hello-goodbye-ionic-angular-v1",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
